@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+{% if  error == 'К сожалению вы ввели некорректный текст' %}
+    <h2> {{ error }}</h2>
+{% else %}
+    <h2>Шифр: {{ cipher }}</h2>
+    <h2>Текст: {{ text }}</h2>
+    <h2>Ключ: {{ key }}</h2>
+    <h2>Решение: {{ answer }}</h2>
+{% endif %}
+<h4><a href="/">Попробовать еще раз</a></h4>
+</body>
+</html>

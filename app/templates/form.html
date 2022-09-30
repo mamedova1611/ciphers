@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>ШИФРОВАНИЕ</h2>
+    <form method="get" action="{% url 'cipher' %}">
+        <select name="cipher">Выберите шифр
+            <option  name="cipher" value="transposition">Маршрутная транспозия</option>
+            <option  name="cipher" value="caesar">Шифр Цезаря</option>
+            <option  name="cipher" value="vigenere">Шифр Виженера</option>
+            <option name="cipher" value="note">Одноразовый блокнот</option>
+            <option name="cipher" value="playfair">Шифр Плейфера</option>
+        </select>
+        <input style="display:flex;width: 500px; margin: 5px 0px;" type="text" name="key" placeholder="Введите ключ">
+        <input style="display:flex;width: 500px; margin-bottom: 5px;" type="text" name="text" placeholder="Введите значение">
+        <input type="submit" name="encrypt" value="Зашифровать" >
+        <input type="submit" name="decipher" value="Расшифровать" >
+        {% csrf_token %}
+    </form>
+</body>
+</html>
